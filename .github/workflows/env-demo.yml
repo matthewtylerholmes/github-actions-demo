@@ -1,0 +1,15 @@
+name: Environment Variable Demo
+
+on: [push]
+
+
+env:
+  GREETING: "Hello"
+
+
+jobs:
+  print-greeting: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print GREETING
+        run: echo "${{ env.GREETING }}, World!" 
